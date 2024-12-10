@@ -19,9 +19,9 @@ InputField = Entry(root)
 
 
 # Arrange widgets on the screen
-PrevBut.pack()
-NextBut.pack()
-CheckBut.pack()
-InputField.pack()
+PrevBut.pack(side=LEFT)
+NextBut.pack(side=LEFT)
+CheckBut.pack(side=RIGHT)
+InputField.pack(side=RIGHT)
 
 root.mainloop()
