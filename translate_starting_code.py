@@ -1,23 +1,32 @@
 from tkinter import *
+from tkinter import messagebox   # for error messages
+from tkinter import ttk          # for the Separator GUI element
 
 root = Tk()
+root.title("Super Funtime")
 
-words_en = ["mouse", "armadillo", "caterpillar", "buffalo", "dragonfly", "eel", "platypus", "lark", "manatee", "squid"]
-words_nl = ["muis", "gordeldier", "rups", "buffel", "libelle", "paling", "vogelbekdier", "leeuwerik", "zeekoe", "inktvis"]
-def previous():
-    print("previous button clicked")
-def next():
-    print("next button clicked")
+def reset():
+    print("reset button clicked")
 def check():
     print("check button clicked")
+def player():
+    print('player 1/2')
+def count():
+    print('count xyz')
+def prevword():
+    print('this is prevword')
 
 # Init buttons, labels, entries
-PrevBut = Button(root, text='Previous', command=previous)
-NextBut = Button(root, text='Next', command=next)
+ResetBut = Button(root, text='Reset', command=reset)
 CheckBut = Button(root, text='Check', command=check)
 InputField = Entry(root)
-
-
+PlayerLabel = Label(root, text="Player: ")
+RoundLabel = Label(root, text="Round: ")
+PlayerC = Label(root, command=player)
+RoundC = Label(root, command=count)
+PrevLab = Label(root, text="Previous: ")
+WordLab = Label(root, text="Word: ")
+PrevDispLab = Label(root, command=prevWord)
 # Arrange widgets on the screen
 PrevBut.pack(side=LEFT)
 NextBut.pack(side=LEFT)
